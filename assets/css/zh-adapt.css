@@ -1,12 +1,33 @@
-/* Preserve Academic Pages typography, palette, spacing and responsive layouts.
-   Only Chinese fallbacks, the official school mark and overflow safeguards. */
-:root { --qau-mark-bg: #037357; --zh-font: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
-html,body { overflow-x: clip; }
-body, h1,h2,h3,h4,h5,h6, .sidebar p, .sidebar li { font-family: var(--zh-font); }
-.qau-school-mark { display:block; max-width:190px; padding:10px; margin:14px 0; background:var(--qau-mark-bg); }
-.qau-school-mark img { display:block; width:100%; height:auto; border-radius:0; }
-.page__title,.archive__item-title { overflow-wrap:anywhere; }
-.greedy-nav a,.author__urls-wrapper button { white-space:nowrap; }
-@media(max-width:1023px) { .qau-school-mark { max-width:180px; margin:12px 0; } }
-/* Keep the original footer appearance while preventing overlap on long pages. */
-.page__footer { position:relative; bottom:auto; }
+/* Academic Pages Chinese layout · restrained profile rail and readable document.
+   Hallmark · pre-emit critique: P4 H5 E4 S4 R5 V4 */
+:root {
+ --academic-ink:#273832; --academic-muted:#68756e; --academic-accent:#176347;
+ --academic-rule:#dfe6e1; --academic-surface:#f5f7f5; --academic-paper:#ffffff;
+ --qau-mark-bg:#037357;
+ --zh-font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+ --global-bg-color:var(--academic-paper); --global-text-color:var(--academic-ink);
+ --global-border-color:var(--academic-rule); --global-link-color:var(--academic-accent);
+ --global-masthead-link-color:var(--academic-muted); --global-footer-bg-color:var(--academic-paper);
+}
+html[data-theme="dark"] {--academic-ink:#e1e9e3;--academic-muted:#a8b6ad;--academic-accent:#8cc6a6;--academic-rule:#374b40;--academic-surface:#22372b;--academic-paper:#17261e;}
+html,body{overflow-x:clip;font-size:16px}body{padding:76px 0 0;line-height:1.8;min-height:100vh;display:flex;flex-direction:column}
+body,h1,h2,h3,h4,h5,h6,.sidebar p,.sidebar li{font-family:var(--zh-font)}
+h1,h2,h3{font-style:normal;line-height:1.5;overflow-wrap:anywhere}
+a{text-underline-offset:4px}a:focus-visible,button:focus-visible{outline:2px solid var(--academic-accent);outline-offset:4px}
+.masthead,#main,.page__footer{animation:none}.masthead{height:76px;display:flex;align-items:center}.masthead__inner-wrap{width:1120px;max-width:100%;padding:0 24px}.greedy-nav{background:var(--academic-paper)}.greedy-nav a{font-size:14px;line-height:2.1;white-space:nowrap}.masthead__menu-item--lg{padding-right:20px}.masthead__menu-item--lg a{font-size:19px;letter-spacing:.02em}.masthead__menu-item.selected a{color:var(--academic-accent);border-color:var(--academic-accent)}
+#main{width:1120px;max-width:100%;margin:42px auto 60px;padding:0 24px;display:grid;grid-template-columns:232px minmax(0,1fr);gap:48px;flex:1;align-items:start}#main:before,#main:after{display:none}
+#main .sidebar{position:static;float:none;width:auto;max-width:none;height:auto;overflow:visible;padding:0;margin:0;opacity:1;transform:none}
+#main .page,#main .archive{float:none;width:auto;max-width:none;padding:0;margin:0;min-width:0}
+.page__inner-wrap,.page__content{float:none!important;width:100%!important;margin:0!important}.page__meta{display:none}
+.academic-profile{background:var(--academic-surface);padding:24px 22px;font-size:13px;border-top:3px solid var(--academic-accent)}
+.profile-heading{text-align:left}.sidebar .profile-photo{width:78px;height:78px;display:block;border-radius:50%;margin-bottom:16px}.sidebar .profile-heading h3{font-size:23px;line-height:1.4;margin:0 0 6px;color:var(--academic-ink)}.sidebar .profile-title{font-size:11px;color:var(--academic-muted);margin:0}.sidebar .profile-intro{font-size:13px;line-height:1.8;margin:20px 0;color:var(--academic-muted)}
+.profile-details{padding-top:4px;border-top:1px solid var(--academic-rule)}.sidebar .profile-details p{font-size:12px;line-height:1.8;margin:16px 0}.profile-details span{display:block;font-size:10px;color:var(--academic-muted);margin-bottom:3px;letter-spacing:.04em}.profile-join{display:flex;justify-content:space-between;padding:12px 0;margin-top:10px;border-top:1px solid var(--academic-rule);text-decoration:none!important;white-space:nowrap;font-size:13px}.qau-school-mark{display:block;padding:9px;background:var(--qau-mark-bg);margin-top:14px}.qau-school-mark img{display:block;width:100%;height:auto;border-radius:0}
+.page__title{font-size:29px;font-weight:650;margin:0 0 18px;line-height:1.5;letter-spacing:.015em;padding-bottom:18px;border-bottom:1px solid var(--academic-rule)}
+.page__content p,.archive>p{font-size:15px;line-height:1.9;margin:0 0 16px}.archive>p:first-of-type,.page__content>p:first-of-type{color:var(--academic-muted)}
+.page__content h2,.archive>h2{font-size:19px;font-weight:650;margin:28px 0 13px;padding-bottom:9px;border-bottom:1px solid var(--academic-rule)}
+.page__content li{font-size:14px;line-height:1.9;margin-bottom:6px}.page__content ul,.page__content ol{padding-left:21px;margin:0 0 18px}.page__content strong{font-weight:600}
+.archive>hr{display:none}.list__item{width:100%;margin:0;float:none}.archive__item{padding:17px 0;border-bottom:1px solid var(--academic-rule)}.archive__item-title{font-size:17px;font-weight:600;margin:0 0 8px;line-height:1.7}.archive__item:hover .archive__item-title{text-decoration:none}.archive__item p{font-size:13px;line-height:1.85;margin:5px 0;color:var(--academic-muted)}.archive__item-excerpt{font-size:13px!important}.archive__item i{font-style:normal}.archive>h2 + .list__item .archive__item{padding-top:3px}
+.page__footer{position:relative;bottom:auto;float:none;clear:both;margin:0;border-top:1px solid var(--academic-rule);color:var(--academic-muted)}.page__footer footer{max-width:1120px;margin:0 auto;padding:22px 24px}.academic-footer{display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:13px}.academic-footer>span{color:var(--academic-ink);white-space:nowrap}.academic-footer small{font-size:11px}
+@media(max-width:900px){#main{grid-template-columns:200px minmax(0,1fr);gap:30px}.academic-profile{padding:20px 18px}.greedy-nav a{margin:0 12px}}
+@media(max-width:650px){body{padding-top:64px}.masthead{height:64px}.masthead__inner-wrap{padding:0 18px}#main{display:block;padding:0 20px;margin:24px auto 36px}.academic-profile{padding:18px;margin-bottom:28px;display:grid;grid-template-columns:minmax(0,1fr) 114px;gap:12px 16px;align-items:center}.profile-heading{display:flex;align-items:center;gap:12px;min-width:0;grid-column:1/-1}.sidebar .profile-photo{width:55px;height:55px;margin:0}.sidebar .profile-heading h3{font-size:21px}.sidebar .profile-intro{display:none}.profile-details{display:none}.profile-join{margin:0;padding:0;border:0;justify-content:flex-start;gap:12px}.qau-school-mark{margin:0;padding:6px}.page__title{font-size:25px;margin-bottom:16px;padding-bottom:12px}.page__content p,.archive>p{font-size:14px}.page__content h2,.archive>h2{font-size:18px;margin-top:25px}.archive__item-title{font-size:16px}.academic-footer{display:block}.academic-footer small{display:block;margin-top:6px}.page__footer footer{padding:20px}.greedy-nav a{font-size:13px}.masthead__menu-item--lg{padding-right:8px}.masthead__menu-item--lg a{font-size:17px}.masthead__inner-wrap nav{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
