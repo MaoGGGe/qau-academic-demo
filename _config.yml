@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale: "zh-CN"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title: "青农 · 学术主页示例"
+title: "教师姓名"
 title_separator          : "-"
-name: "教师示例"
+name: "教师姓名"
 description: "面向中国高校的中文教师学术主页 Demo，非青岛农业大学官方网站。"
 url: "https://maoggge.github.io"
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
@@ -22,10 +22,12 @@ repository: "MaoGGGe/qau-academic-demo"
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
-  name: "教师示例"
-  bio: "作物科学与智慧农业 · 虚构资料"
+  avatar: "profile.png"
+  name: "教师姓名"
+  bio: "请在此填写职称、导师资格与研究方向。"
   location: "山东 · 青岛"
-  employer: "青岛农业大学场景 Demo"
+  employer: "青岛农业大学 · 学院待填写"
+  uri: "https://www.qau.edu.cn/"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
@@ -70,7 +72,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
 

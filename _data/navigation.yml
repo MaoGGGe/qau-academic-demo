@@ -1,6 +1,4 @@
 main:
-  - title: "教师简介"
-    url: /
   - title: "论文成果"
     url: /publications/
   - title: "科研项目"

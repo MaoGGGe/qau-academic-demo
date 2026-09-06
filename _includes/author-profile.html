@@ -20,8 +20,10 @@
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
 
+  <a class="qau-school-mark" href="https://www.qau.edu.cn/" title="青岛农业大学官网"><img src="{{ '/images/qau-official-logo.png' | relative_url }}" alt="青岛农业大学校徽及校名"></a>
+
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
+    <button class="btn btn--inverse">联系信息</button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
