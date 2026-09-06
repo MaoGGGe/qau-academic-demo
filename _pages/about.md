@@ -1,5 +1,5 @@
 ---
-layout: qau
+layout: single
 title: "教师姓名 / 个人学术主页"
 permalink: /
 author_profile: true

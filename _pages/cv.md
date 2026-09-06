@@ -1,5 +1,5 @@
 ---
-layout: qau
+layout: single
 title: "个人履历"
 permalink: /cv/
 author_profile: true

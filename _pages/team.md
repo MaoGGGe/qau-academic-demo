@@ -1,5 +1,5 @@
 ---
-layout: qau
+layout: single
 title: "团队成员"
 permalink: /team/
 author_profile: true
