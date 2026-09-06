@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: qau
 title: "招生信息"
 permalink: /recruitment/
 author_profile: true
