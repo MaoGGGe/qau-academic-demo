@@ -8,3 +8,5 @@ body, h1,h2,h3,h4,h5,h6, .sidebar p, .sidebar li { font-family: var(--zh-font); 
 .page__title,.archive__item-title { overflow-wrap:anywhere; }
 .greedy-nav a,.author__urls-wrapper button { white-space:nowrap; }
 @media(max-width:1023px) { .qau-school-mark { max-width:180px; margin:12px 0; } }
+/* Keep the original footer appearance while preventing overlap on long pages. */
+.page__footer { position:relative; bottom:auto; }
