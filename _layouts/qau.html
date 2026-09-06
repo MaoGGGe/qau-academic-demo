@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{{ page.title }} · {{ site.title }}</title><meta name="description" content="{{ site.description | escape }}"><link rel="stylesheet" href="{{ '/assets/css/qau.css' | relative_url }}"><link rel="icon" href="{{ '/images/qau-leaf.svg' | relative_url }}" type="image/svg+xml"></head>
+<body><a class="skip" href="#main">跳到正文</a>
+<div class="demo-bar">中文学术主页 DEMO <span>· 人物与成果为虚构示例，非学校官方网站</span></div>
+<header class="masthead"><a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/images/qau-leaf.svg' | relative_url }}" width="38" height="38" alt=""><span>青农 · 学术主页<small>QAU INSPIRED / ACADEMIC DEMO</small></span></a><a class="school-link" href="https://www.qau.edu.cn/" target="_blank" rel="noopener">学校官网 ↗</a></header>
+<nav aria-label="主导航"><div class="nav-inner">{% for item in site.data.navigation.main %}<a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>{% endfor %}</div></nav>
+<div class="shell"><aside class="profile"><div class="portrait" role="img" aria-label="教师照片占位图"><span>教师照片</span><small>正式使用时替换</small></div><h2>教师示例<span class="demo-tag">DEMO</span></h2><p class="position">职称 / 导师资格待填写</p><p>作物科学与智慧农业<br>青岛农业大学场景示例</p><dl><dt>所在城市</dt><dd>山东 · 青岛</dd><dt>研究关键词</dt><dd>作物生理 · 土壤健康<br>智慧农业 · 绿色生产</dd><dt>联系方式</dt><dd>正式邮箱待填写</dd></dl><a class="profile-action" href="{{ '/recruitment/' | relative_url }}">查看招生说明 <span>↗</span></a><p class="profile-note">扎根田野，连接科研与生产。<br>一份面向农业科研的主页样板。</p></aside>
+<main id="main"><div class="page-kicker">{{ page.kicker | default: 'ACADEMIC PROFILE' }}</div><h1>{{ page.title }}</h1>{{ content }}</main></div>
+<footer><div><strong>青农 · 学术主页示例</strong><p>仅用于模板演示。教师身份、论文、项目、成员与招生安排均为虚构或占位内容。</p><p>学校名称用于说明适配场景，不代表学校授权或背书；本站未使用官方校徽。</p></div><div class="credits"><a href="https://github.com/MaoGGGe/qau-academic-demo">模板源码 ↗</a><br><a href="https://github.com/academicpages/academicpages.github.io">基于 Academic Pages</a><br><span>中文 Demo · 2026</span></div></footer></body></html>
