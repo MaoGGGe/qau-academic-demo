@@ -31,3 +31,13 @@ a{text-underline-offset:4px}a:focus-visible,button:focus-visible{outline:2px sol
 @media(max-width:900px){#main{grid-template-columns:200px minmax(0,1fr);gap:30px}.academic-profile{padding:20px 18px}.greedy-nav a{margin:0 12px}}
 @media(max-width:650px){body{padding-top:64px}.masthead{height:64px}.masthead__inner-wrap{padding:0 18px}#main{display:block;padding:0 20px;margin:24px auto 36px}.academic-profile{padding:18px;margin-bottom:28px;display:grid;grid-template-columns:minmax(0,1fr) 114px;gap:12px 16px;align-items:center}.profile-heading{display:flex;align-items:center;gap:12px;min-width:0;grid-column:1/-1}.sidebar .profile-photo{width:55px;height:55px;margin:0}.sidebar .profile-heading h3{font-size:21px}.sidebar .profile-intro{display:none}.profile-details{display:none}.profile-join{margin:0;padding:0;border:0;justify-content:flex-start;gap:12px}.qau-school-mark{margin:0;padding:6px}.page__title{font-size:25px;margin-bottom:16px;padding-bottom:12px}.page__content p,.archive>p{font-size:14px}.page__content h2,.archive>h2{font-size:18px;margin-top:25px}.archive__item-title{font-size:16px}.academic-footer{display:block}.academic-footer small{display:block;margin-top:6px}.page__footer footer{padding:20px}.greedy-nav a{font-size:13px}.masthead__menu-item--lg{padding-right:8px}.masthead__menu-item--lg a{font-size:17px}.masthead__inner-wrap nav{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Neutralize header measurements injected by the upstream navigation script. */
+#main .sidebar { padding-top:0!important; }
+body { margin-bottom:0!important; color:var(--academic-ink); background:var(--academic-paper); }
+html[data-theme="dark"] {
+ --global-bg-color:var(--academic-paper); --global-text-color:var(--academic-ink);
+ --global-border-color:var(--academic-rule); --global-dark-border-color:var(--academic-rule);
+ --global-link-color:var(--academic-accent); --global-link-color-hover:var(--academic-accent);
+ --global-link-color-visited:var(--academic-accent); --global-text-color-light:var(--academic-muted);
+ --global-masthead-link-color:var(--academic-muted); --global-footer-bg-color:var(--academic-paper);
+}
