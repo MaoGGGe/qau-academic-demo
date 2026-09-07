@@ -12,7 +12,11 @@
   }
 
   function applyTheme(theme) {
-    root.toggleAttribute("data-theme", theme === "dark");
+    if (theme === "dark") {
+      root.setAttribute("data-theme", "dark");
+    } else {
+      root.removeAttribute("data-theme");
+    }
     const icon = document.getElementById("theme-icon");
     if (icon) icon.textContent = theme === "dark" ? "☾" : "☀";
   }
