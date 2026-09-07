@@ -14,6 +14,9 @@ html,body{overflow-x:clip;font-size:16px}body{padding:76px 0 0;line-height:1.8;m
 body,h1,h2,h3,h4,h5,h6,.sidebar p,.sidebar li{font-family:var(--zh-font)}
 h1,h2,h3{font-style:normal;line-height:1.5;overflow-wrap:anywhere}
 a{text-underline-offset:4px}a:focus-visible,button:focus-visible{outline:2px solid var(--academic-accent);outline-offset:4px}
+#theme-icon{display:inline-block;width:1.1em;text-align:center;font-size:16px;line-height:1}
+i[class*="fa-"]{font-family:inherit;font-style:normal}
+i.fa-clock:before{content:"◷"}i.fa-calendar:before{content:"▣"}i.fa-link:before{content:"↗"}i.fa-tags:before{content:"#"}i.fa-folder-open:before{content:"▸"}i.fa-file-text:before{content:"≡"}i.fa-spinner:before{content:"↻"}
 .masthead,#main,.page__footer{animation:none}.masthead{height:76px;display:flex;align-items:center}.masthead__inner-wrap{width:1120px;max-width:100%;padding:0 24px}.greedy-nav{background:var(--academic-paper)}.greedy-nav a{font-size:14px;line-height:2.1;white-space:nowrap}.masthead__menu-item--lg{padding-right:20px}.masthead__menu-item--lg a{font-size:19px;letter-spacing:.02em}.masthead__menu-item.selected a{color:var(--academic-accent);border-color:var(--academic-accent)}
 #main{width:1120px;max-width:100%;margin:42px auto 60px;padding:0 24px;display:grid;grid-template-columns:232px minmax(0,1fr);gap:48px;flex:1;align-items:start}#main:before,#main:after{display:none}
 #main .sidebar{position:static;float:none;width:auto;max-width:none;height:auto;overflow:visible;padding:0;margin:0;opacity:1;transform:none}
